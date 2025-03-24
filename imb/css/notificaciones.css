@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.notificaciones-container {
+    width: 50%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+li.nueva {
+    background-color: #e3f2fd;
+}
+
+li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+li .fecha {
+    float: right;
+    font-size: 12px;
+    color: #777;
+}

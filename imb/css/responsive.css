@@ -1,0 +1,38 @@
+/* Asegurar que todas las imágenes sean responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  
+  /* Ajuste específico para imágenes de perfil */
+  .p-foto img {
+    width: 150px;  /* Tamaño máximo en escritorio */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* 📌 Ajuste para Tablets (menos de 768px) */
+  @media (max-width: 768px) {
+    .w-left, .w-right {
+      width: 100%;
+      float: none;  /* Evita que se alineen en columnas */
+    }
+  
+    .p-foto img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  /* 📌 Ajuste para Móviles (menos de 480px) */
+  @media (max-width: 480px) {
+    .p-foto img {
+      width: 100px;  /* Tamaño más pequeño para móviles */
+      height: 100px;
+    }
+  }
+  
+  

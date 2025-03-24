@@ -1,0 +1,79 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo general del cuerpo */
+body {
+    background-color: #fafafa;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contenedor del formulario */
+form {
+    background: #fff;
+    width: 50%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Icono para subir archivos */
+.hl-icon img {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.hl-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Imagen previa de subida */
+#imgSalida {
+    max-width: 100%;
+    height: auto;
+    display: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Área de texto para la descripción */
+textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    font-size: 16px;
+}
+
+/* Botón de compartir */
+.myButton {
+    background: #0095f6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.myButton:hover {
+    background: #0077cc;
+}
+
+/* Mensajes de error */
+.alert {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}

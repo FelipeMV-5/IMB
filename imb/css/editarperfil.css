@@ -1,0 +1,115 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.h-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.e-mid {
+    display: flex;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+}
+
+.e-left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.e-right {
+    width: 70%;
+    padding: 20px;
+}
+
+/* Botones de navegación */
+.button_edit, .button_edit_on {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button_edit {
+    background-color: #ddd;
+    color: #333;
+}
+
+.button_edit_on {
+    background-color: #0095f6;
+    color: white;
+}
+
+/* Formulario de edición */
+.e-contenido {
+    margin-bottom: 15px;
+}
+
+.e-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.e-input input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.e-input select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button_blue {
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.button_blue:hover {
+    background-color: #007acc;
+}
+
+.upload-btn {
+    display: inline-block;
+    background-color: #0095f6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+}
+
+.upload-btn:hover {
+    background-color: #007acc;
+}
+
+/* Mensajes de error */
+.error-message {
+    color: red;
+    font-size: 12px;
+}
