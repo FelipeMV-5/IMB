@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Verix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral izquierda -->
+        <aside class="sidebar">
+            <h2>Verix</h2>
+            <ul>
+                <li><a href="inicio.html"><i class="fa-solid fa-house"></i> <span>Inicio</span></a></li>
+                <li><a href="buscar.html"><i class="fa-solid fa-magnifying-glass"></i> <span>Buscar</span></a></li>
+                <li><a href="crear.html"><i class="fa-solid fa-plus"></i> <span>Crear</span></a></li>
+                <li><a href="mensajes.html"><i class="fa-solid fa-envelope"></i> <span>Mensajes</span></a></li>
+                <li><a href="perfil.html" class="active"><i class="fa-solid fa-user"></i> <span>Perfil</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="content">
+            <div class="profile-header">
+                <img src="https://acortar.link/EEiQGX" alt="Foto de perfil" class="profile-pic">
+                <div class="profile-info">
+                    <h2>__felipemartinez__</h2>
+                    <p>@Filips</p>
+                    <p>📍 Ubicación: Ciudad Ejemplo</p>
+                    <p>📅 Se unió en 2024</p>
+                    <a href="editar_perfil.html"><button a class="btn">Editar perfil</button></a>
+                </div>
+            </div>
+
+            <div class="profile-bio">
+                <h3>Biografía</h3>
+                <p>Escribe algo interesante sobre ti...</p>
+            </div>
+
+            <div class="profile-posts">
+                <h3>Publicaciones</h3>
+                <div class="post">
+                    <p>📸 Publicación de ejemplo 1</p>
+                </div>
+                <div class="post">
+                    <p>📸 Publicación de ejemplo 2</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/JS/script.js"></script>
+
+    <!-- Barra de navegación solo en móvil -->
+    <nav class="mobile-nav">
+        <a href="inicio.html"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
+        <a href="buscar.html"><i class="fa-solid fa-magnifying-glass"></i><span>Buscar</span></a>
+        <a href="crear.html"><i class="fa-solid fa-plus-circle"></i><span>Crear</span></a>
+        <a href="mensajes.html"><i class="fa-solid fa-envelope"></i><span>Mensajes</span></a>
+        <a href="perfil.html" class="active"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
+    </nav>
+</body>
+</html>
