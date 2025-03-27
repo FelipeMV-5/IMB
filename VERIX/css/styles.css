@@ -1,5 +1,4 @@
-/* styles.css */
-
+/* 🔹 Estilos Generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,7 +13,7 @@ body {
     width: 100%;
 }
 
-/* Barra lateral izquierda */
+/* 🔹 Barra Lateral */
 .sidebar {
     width: 250px;
     background: #fff;
@@ -42,19 +41,25 @@ body {
     font-size: 16px;
 }
 
-
-.sidebar a{
+.sidebar a {
     text-decoration: none;
     color: black;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
-.sidebar ul li:hover {
+
+.sidebar ul li:hover{
     background: #ddd;
     border-radius: 5px;
-
+}
+.sidebar ul li a.active {
+    background-color: #ddd;
+    color: blue;
+    border-radius: 10px;
 }
 
 .notif {
-
     background: red;
     color: white;
     font-size: 12px;
@@ -63,77 +68,36 @@ body {
     margin-left: auto;
 }
 
-/* Configuración */
-.settings-sidebar {
-    width: 300px;
-    background: white;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    right: -350px;
-    height: 100vh;
-    border-left: 1px solid #ddd;
-    transition: right 0.3s ease;
-}
-
-.settings-sidebar.active {
-    right: 0;
-}
-
-#btn-cerrar-config {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    float: right;
-}
-
-/* Menú de configuración */
-.settings-menu {
-    list-style: none;
-    padding: 0;
-}
-
-.settings-menu li {
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.settings-menu li i {
-    margin-left: auto;
-}
-
-/* Submenu de ayuda */
-.submenu {
-    list-style: none;
-    padding: 0;
+/* 🔹 Botón "Más" con Submenú */
+#submenu-mas {
     display: none;
+    list-style: none;
+    padding: 0;
+    margin-left: 15px;
 }
 
-.submenu.active {
+#submenu-mas.active {
     display: block;
 }
 
-.submenu li {
+#submenu-mas li {
     padding: 8px 10px;
     border-left: 3px solid #ccc;
     margin-left: 15px;
 }
-.submenu a ,
-.settings-sidebar a {
+
+#submenu-mas li a {
     text-decoration: none;
     color: black;
 }
 
-.submenu a:hover ,
-.settings-sidebar a:hover {
+#submenu-mas li a:hover {
     background-color: #ccc;
     padding: 10px;
     border-radius: 10px;
 }
-/* Contenido principal */
+
+/* 🔹 Contenido Principal */
 .content {
     flex-grow: 1;
     padding: 20px;
@@ -170,7 +134,7 @@ body {
     background: #28a745;
 }
 
-/* Estilos para el formulario */
+/* 🔹 Formulario */
 form {
     display: flex;
     flex-direction: column;
@@ -199,11 +163,14 @@ select {
     margin-right: 10px;
 }
 
-/* Oculta la barra de navegación inferior en escritorio */
+/* 🔹 Navegación Móvil */
 .mobile-nav {
-    display: none; /* Por defecto oculta la barra */
+    display: none; 
 }
-/* Ocultar la barra lateral en móvil */
+.mobile-nav a.active {
+    color: #007bff;
+}
+
 @media (max-width: 768px) {
     .sidebar {
         display: none;
