@@ -1,6 +1,6 @@
 /* 🔹 Estilos Generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,18 +13,21 @@ body {
     width: 100%;
 }
 
-/* 🔹 Barra Lateral */
+/* 🔹 Barra Lateral Izquierda */
 .sidebar {
     width: 250px;
-    background: #fff;
+    background: #ffffff;
     padding: 20px;
     border-right: 1px solid #ddd;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .sidebar h2 {
     margin: 0;
     font-size: 22px;
     font-weight: bold;
+    color: #333;
+    text-align: center;
 }
 
 .sidebar ul {
@@ -34,29 +37,27 @@ body {
 }
 
 .sidebar ul li {
-    padding: 12px;
+    padding: 15px 12px;
     display: flex;
     align-items: center;
     cursor: pointer;
     font-size: 16px;
+    gap: 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
 }
 
 .sidebar a {
     text-decoration: none;
-    color: black;
+    color: #333;
     display: flex;
     align-items: center;
     width: 100%;
+    gap: 15px;
 }
 
-.sidebar ul li:hover{
+.sidebar ul li:hover {
     background: #ddd;
-    border-radius: 5px;
-}
-.sidebar ul li a.active {
-    background-color: #ddd;
-    color: blue;
-    border-radius: 10px;
 }
 
 .notif {
@@ -68,33 +69,113 @@ body {
     margin-left: auto;
 }
 
-/* 🔹 Botón "Más" con Submenú */
-#submenu-mas {
-    display: none;
+/* 🔹 Barra de Configuración (Derecha) */
+.settings-sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #f8f9fa;
+    border-left: 1px solid #ddd;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settings-sidebar.visible {
+    right: 0;
+}
+
+/* 🔹 Botón de cerrar */
+#btn-cerrar-config {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+#btn-cerrar-config:hover {
+    color: #000;
+}
+
+/* 🔹 Título Configuración */
+.settings-sidebar h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+/* 🔹 Estilos del Menú */
+.settings-menu {
     list-style: none;
     padding: 0;
-    margin-left: 15px;
+    width: 100%;
 }
 
-#submenu-mas.active {
+.settings-menu li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #444;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.settings-menu li i {
+    font-size: 18px;
+    color: #666;
+}
+
+.settings-menu li:hover {
+    background: #e3e3e3;
+    cursor: pointer;
+}
+
+/* 🔹 Submenú de Ayuda */
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: none;
+    width: 100%;
+}
+
+.submenu li {
+    padding: 10px 15px;
+    font-size: 15px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out;
+}
+
+.submenu li:hover {
+    background: #ddd;
+    cursor: pointer;
+}
+
+/* 🔹 Mostrar submenú */
+.submenu.visible {
     display: block;
-}
-
-#submenu-mas li {
-    padding: 8px 10px;
-    border-left: 3px solid #ccc;
-    margin-left: 15px;
-}
-
-#submenu-mas li a {
-    text-decoration: none;
-    color: black;
-}
-
-#submenu-mas li a:hover {
-    background-color: #ccc;
-    padding: 10px;
-    border-radius: 10px;
 }
 
 /* 🔹 Contenido Principal */
@@ -102,6 +183,13 @@ body {
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
+}
+
+/* 🔹 Sección de Perfil */
+.content {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
 }
 
 .profile-section {
@@ -115,12 +203,14 @@ body {
     border-radius: 50%;
     width: 80px;
     height: 80px;
+    border: 2px solid #007bff;
 }
 
 .profile-info p {
     margin: 5px 0;
 }
 
+/* 🔹 Botones */
 .btn {
     padding: 8px 12px;
     border: none;
@@ -128,10 +218,19 @@ body {
     color: white;
     cursor: pointer;
     border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0056b3;
 }
 
 .btn-primary {
     background: #28a745;
+}
+
+.btn-primary:hover {
+    background: #218838;
 }
 
 /* 🔹 Formulario */
@@ -165,10 +264,7 @@ select {
 
 /* 🔹 Navegación Móvil */
 .mobile-nav {
-    display: none; 
-}
-.mobile-nav a.active {
-    color: #007bff;
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -200,5 +296,18 @@ select {
     .mobile-nav i {
         font-size: 20px;
         margin-bottom: 3px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info {
+        text-align: center;
     }
 }

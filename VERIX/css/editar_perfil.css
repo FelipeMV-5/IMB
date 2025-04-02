@@ -1,0 +1,82 @@
+/* 🔹 Estilos para la sección de perfil */
+.content {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.profile-section img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.btn {
+    padding: 8px 12px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background: #28a745;
+}
+
+/* 🔹 Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 60px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+/* 🔹 Responsividad */
+@media (max-width: 768px) {
+    .content {
+        padding: 15px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+}
+ 
