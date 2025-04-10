@@ -1,0 +1,225 @@
+/* Reset de Márgenes y Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #FAFAFA;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Contenedores Responsivos */
+  .w-left, .w-right {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .main-content {
+    width: 90%;
+    max-width: 350px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+    background-color: #3897f0;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .btn:hover {
+    background-color: #3078d3;
+  }
+  
+  /* Botones adicionales */
+  .myButton, .button_white, .button_blue {
+    display: inline-block;
+    font-size: 16px;
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .myButton {
+    background-color: #3e3ed6;
+    color: white;
+    border: none;
+  }
+  
+  .button_white {
+    background-color: white;
+    color: #262626;
+    border: 1px solid #DBDBDB;
+  }
+  
+  .button_blue {
+    background-color: #3897F0;
+    color: white;
+    border: none;
+  }
+  
+  /* Sección Home */
+  .h-content {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .h-left, .h-right {
+    width: 100%;
+  }
+  
+  .hl-cont {
+    width: 100%;
+    border: 1px solid #E6E6E6;
+    margin-bottom: 20px;
+  }
+  
+  /* Imagenes Responsivas */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Media Queries para Responsividad */
+  @media (min-width: 768px) {
+    .w-left, .w-right {
+      width: 50%;
+    }
+    
+    .h-left {
+      width: 60%;
+    }
+    
+    .h-right {
+      width: 35%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .main-content {
+      width: 40%;
+    }
+  }
+  @media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        border-top: 1px solid #ddd;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .mobile-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    .mobile-nav i {
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+}
+/* General Styles */
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(174, 174, 174);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgb(101, 102, 102);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}
+
+
+  

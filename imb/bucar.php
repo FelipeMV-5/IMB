@@ -42,7 +42,7 @@ $resultado = $mysqli->query("SELECT * FROM users WHERE username LIKE '%$query%' 
 </body>
 </html>
 <style>
-    /* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +50,7 @@ $resultado = $mysqli->query("SELECT * FROM users WHERE username LIKE '%$query%' 
     font-family: Arial, sans-serif;
 }
 
-/* Contenedor principal */
+
 body {
     background-color: #f4f4f4;
     text-align: center;
@@ -60,13 +60,13 @@ body {
     width: 90px;
 }
 
-/* Título de búsqueda */
+
 h2 {
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Contenedor de resultados */
+
 ul {
     list-style: none;
     width: 50%;
@@ -78,7 +78,7 @@ ul {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para cada usuario en la lista */
+
 li {
     padding: 10px;
     display: flex;
@@ -95,7 +95,6 @@ li:hover {
     background: #f1f1f1;
 }
 
-/* Imagen de perfil */
 li img {
     width: 50px;
     height: 50px;
@@ -103,7 +102,7 @@ li img {
     margin-right: 15px;
 }
 
-/* Enlace a perfil */
+
 li a {
     text-decoration: none;
     color: #333;
@@ -118,7 +117,7 @@ li a:hover {
     color: #007bff;
 }
 
-/* Mensaje cuando no hay resultados */
+
 p {
     color: #777;
     font-size: 16px;

@@ -1,0 +1,50 @@
+.seguidores-container {
+    width: 80%; /* Ajusta el ancho de la sección */
+    max-width: 1200px; /* Maxima anchura para que no se haga muy grande en pantallas grandes */
+    margin: 0 auto; /* Esto centrará el contenido horizontalmente */
+    padding: 20px;
+    text-align: center; /* Centra el texto */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.seguidores-list {
+    display: flex;
+    flex-wrap: wrap; /* Esto permitirá que los seguidores se ajusten en varias filas si es necesario */
+    justify-content: center; /* Esto centrará los elementos dentro del contenedor */
+    list-style-type: none;
+    padding: 0;
+}
+
+.seguidores-list .usuario {
+    display: flex;
+    flex-direction: column; /* Apila el avatar y el nombre verticalmente */
+    align-items: center; /* Centra los elementos dentro del usuario */
+    margin: 15px; /* Espacio entre cada usuario */
+    width: 120px; /* Ancho fijo para cada usuario */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.seguidores-list .usuario a {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: #333; /* Cambia el color del texto */
+    font-size: 16px;
+}
+
+.seguidores-list .usuario img {
+    border-radius: 50%; /* Hace la imagen circular */
+    width: 80px; /* Tamaño fijo para las imágenes */
+    height: 80px; /* Tamaño fijo para las imágenes */
+    margin-bottom: 10px; /* Espacio entre la imagen y el nombre */
+}
+
+.seguidores-list .usuario span {
+    font-size: 16px;
+    font-weight: 500; /* Mejorar la legibilidad */
+}
+

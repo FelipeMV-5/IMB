@@ -70,7 +70,7 @@ body {
 /* Enlace de registro */
 .l-part a {
     display: block;
-    margin-top: 15px;
+    margin: 2px,0px;
     font-size: 14px;
     color: #007bff;
     text-decoration: none;

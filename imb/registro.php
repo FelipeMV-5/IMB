@@ -38,12 +38,13 @@ if (isset($_POST['registro'])) {
                       VALUES ('$email', '$nombre', '$usuario', '$password', NOW(), '$ip', '$aleatorio')";
 
             if ($mysqli->query($query)) {
+                require("fuctions.php");
                 header("Refresh: 2; URL=index.php");
                 echo "Felicidades $usuario, te has registrado correctamente. Hemos enviado un correo de confirmación.";
 
                 // Envío de correo de confirmación
                 $email_to = $email;
-                $email_subject = "Confirma tu email en Photogram";
+                $email_subject = "Confirma tu email en IMB";
                 $email_from = "reply@tusitioweb.com";
 
                 $email_message = "Hola $usuario,\n\n";
@@ -67,7 +68,7 @@ if (isset($_POST['registro'])) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Photogram - Registro</title>
+    <title>IMB - Registro</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" type="text/css">

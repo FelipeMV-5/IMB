@@ -13,20 +13,7 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
---
--- Base de datos: `photogram`
---
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `archivos`
---
 
 CREATE TABLE `archivos` (
   `id` int(11) NOT NULL,
@@ -39,18 +26,12 @@ CREATE TABLE `archivos` (
   `fecha` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `archivos`
---
 
 INSERT INTO `archivos` (`id`, `user`, `ruta`, `tipo`, `size`, `publicacion`, `filtro`, `fecha`) VALUES
 (1, 2, 'ID-1-NAME-8CE168.jpg', 'image/png', 7453480, 1, 'moon', '2018-10-25 22:40:15');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `publicaciones`
---
+
 
 CREATE TABLE `publicaciones` (
   `id` int(11) NOT NULL,
@@ -60,18 +41,11 @@ CREATE TABLE `publicaciones` (
   `fecha` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `publicaciones`
---
 
 INSERT INTO `publicaciones` (`id`, `user`, `descripcion`, `ubicacion`, `fecha`) VALUES
 (1, 2, 'ESto es una imagen', '', '2018-10-25 22:40:14');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `users`
---
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
@@ -97,55 +71,45 @@ CREATE TABLE `users` (
   `last_ip` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Volcado de datos para la tabla `users`
---
+
+
+CREATE TABLE comentarios (
+    id BIGINT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY, -- Agregamos una clave primaria única
+    user_id BIGINT(20) UNSIGNED NOT NULL, 
+    post_id BIGINT(20) UNSIGNED NOT NULL,
+    comment TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha DATE NOT NULL, -- Nueva columna para almacenar la fecha
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `name`, `phone`, `birthday`, `sex`, `bio`, `site_language`, `avatar`, `private_profile`, `verified`, `banned`, `code`, `token`, `confirmed`, `signup_date`, `last_login`, `signup_ip`, `last_ip`) VALUES
 (1, 'demo', '4d186321c1a7f0f354b297e8914ab240', 'demo@demo.com', 'Demo', NULL, NULL, NULL, NULL, 1, 'default.png', '0', '0', '0', '', '', '0', '2018-06-02 22:40:18', '2018-06-02 22:40:18', NULL, NULL),
 (2, 'tuntoriales', '4d186321c1a7f0f354b297e8914ab240', 'tuntoriales@tuntos.com', 'Sebastian', NULL, NULL, NULL, NULL, 1, 'default.png', '0', '0', '0', '5b13632c519bc', '2222', '1', '2018-06-02 22:40:28', NULL, NULL, '::1');
 
---
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `archivos`
---
 ALTER TABLE `archivos`
   ADD PRIMARY KEY (`id`);
 
---
--- Indices de la tabla `publicaciones`
---
+
 ALTER TABLE `publicaciones`
   ADD PRIMARY KEY (`id`);
 
---
--- Indices de la tabla `users`
---
+
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
 
---
--- AUTO_INCREMENT de la tabla `archivos`
---
+
 ALTER TABLE `archivos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
--- AUTO_INCREMENT de la tabla `publicaciones`
---
+
 ALTER TABLE `publicaciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
--- AUTO_INCREMENT de la tabla `users`
---
+
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;

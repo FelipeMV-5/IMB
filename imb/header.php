@@ -6,29 +6,33 @@
     <title>Configuración - Verix</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style-mobile.css">
 </head>
 <body>
     
     <div class="container">
         <!-- Barra lateral izquierda -->
-        <aside class="sidebar">
-      <a href="home.php"> <img class="logo" src="images/logo.png" alt="logo"></a>
-            <ul>
-                <div class="barra">
-                <form action="bucar.php" method="GET">
-                    <input type="text" name="query" placeholder="Buscar usuarios..." required>
-                    <button type="submit">Buscar</button>
-                </form>
-                    <li><a href="home.php"><i class="fa-solid fa-house"></i> <span>Inicio</span></a></li>
-                    <li><i class="fa-solid fa-envelope"></i> <span>Mensajes</span> </li>
-                    <li><a href="notificaciones.php"><i class="fa-solid fa-bell"></i> <span>Notificaciones</span></a></li>
-                    <li><a href="subir.php"><i class="fa-solid fa-plus"></i> <span>Crear</span></a></li>
-                <li><a href="perfil.php"><i class="fa-solid fa-user"></i> <span>Perfil</span></a></li>
-                    <li id="btn-mas"><i class="fa-solid fa-thumbtack"></i> <span>Más</span></li>
-					<li><a href="logout.php"><i class="fa-solid fa-power-off"></i> <span>Cerrar Seccion</span></a></li>               
-				 </div>
-            </ul>
-        </aside>
+        <aside class="sidebar sidebar--activo">
+    <a href="home.php"> <img class="logo" src="images/logo.png" alt="logo"></a>
+    <ul>
+        <div class="barra">
+            <form action="bucar.php" method="GET">
+                <input type="text" name="query" placeholder="Buscar usuarios..." required>
+                <button type="submit">Buscar</button>
+            </form>
+            <li><a href="home.php"><i class="fa-solid fa-house"></i> <span>Inicio</span></a></li>
+            <li><a  href="notificaciones.php"><i class="fa-solid fa-bell"></i> <span>Notificaciones</span></a></li>
+            <li><a  href="subir.php"><i class="fa-solid fa-plus"></i> <span>publicar</span></a></li>
+            <li><a  href="subir-frase.php"><i class="fa-solid fa-plus"></i> <span>que estas pensando?</span></a></li>
+        
+            <li><a  href="perfil.php?username=<?php echo $_SESSION['username']; ?>"><i class="fa-solid fa-user"></i> <span>Perfil</span></a></li>
+
+            <li  id="btn-mas"><i class="fa-solid fa-thumbtack"></i> <span>Más</span></li>
+            <li><a  href="logout.php"><i class="fa-solid fa-power-off"></i> <span>Cerrar Seccion</span></a></li>
+        </div>
+    </ul>
+</aside>
+
 
 
 </div>
@@ -83,7 +87,7 @@ form {
 
 input[type="text"] {
     width: 85%;
-    padding: 10px;
+    padding: 20px;
     font-size: 16px;
     border: 2px solid #ccc;
     border-right: 1px solid #ddd;
@@ -142,9 +146,11 @@ button:hover {
 
 }
 .sidebar a{
-    text-decoration: none;
     color: black;
+    text-decoration: none;
 }
+
+
 
 .sidebar ul li {
     padding: 12px;

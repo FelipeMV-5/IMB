@@ -1,18 +1,24 @@
 <?php
 session_start();
-if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] == FALSE) {
-    header("Location: index.php");
-    exit();
+require("conexion.php"); // Conexión a la base de datos
+
+// Verificar si hay sesión de usuario activa
+if (!isset($_SESSION['id'])) {
+    die("Error: No hay sesión de usuario activa.");
 }
 
-require("conexion.php");
+$usuario_id = $_SESSION['id']; // ID del usuario que verá las notificaciones
 
-// Obtener notificaciones del usuario
-$usuario_id = $_SESSION['id'];
-$notificaciones = $mysqli->query("SELECT * FROM notificaciones WHERE usuario_id = '$usuario_id' ORDER BY fecha DESC");
+// Obtener las notificaciones del usuario
+$stmt = $mysqli->prepare("SELECT * FROM notificaciones WHERE user_id = ? ORDER BY fecha DESC");
+$stmt->bind_param("i", $usuario_id);
+$stmt->execute();
+$notificaciones = $stmt->get_result();
 
-// Marcar notificaciones como leídas
-$mysqli->query("UPDATE notificaciones SET leida = 1 WHERE usuario_id = '$usuario_id'");
+// Verificar si hay errores en la consulta
+if ($stmt->error) {
+    die("Error al ejecutar la consulta: " . $stmt->error);
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,21 +35,56 @@ $mysqli->query("UPDATE notificaciones SET leida = 1 WHERE usuario_id = '$usuario
 <div class="notificaciones-container">
     <h2>Notificaciones</h2>
 
-    <?php if ($notificaciones->num_rows > 0) { ?>
+    <?php
+    // Si hay notificaciones, se muestran en una lista
+    if ($notificaciones->num_rows > 0) { ?>
         <ul>
             <?php while ($noti = $notificaciones->fetch_assoc()) { ?>
-                <li class="<?php echo $noti['leida'] ? 'leida' : 'nueva'; ?>">
-                    <a href="<?php echo $noti['url']; ?>">
-                        <?php echo $noti['mensaje']; ?>
+                <li class="<?php echo ($noti['leido'] == '1') ? 'leida' : 'nueva'; ?>">
+                    <a href="<?php echo isset($noti['url']) ? htmlspecialchars($noti['url']) : '#'; ?>">
+                        <?php echo htmlspecialchars($noti['mensaje']); ?>
                     </a>
                     <span class="fecha"><?php echo date("d/m/Y H:i", strtotime($noti['fecha'])); ?></span>
+                    <?php if ($noti['leido'] != '1') { ?>
+                        <a href="?marcar_leida=<?php echo $noti['id']; ?>" class="marcar-leida">✔ Marcar como leída</a>
+                    <?php } ?>
                 </li>
             <?php } ?>
         </ul>
     <?php } else { ?>
         <p>No tienes nuevas notificaciones.</p>
     <?php } ?>
+
 </div>
 
 </body>
 </html>
+
+<?php
+// Si se ha recibido un parámetro para marcar una notificación como leída
+if (isset($_GET['marcar_leida'])) {
+    $notificacion_id = $_GET['marcar_leida'];
+
+    // Verificar que el ID de la notificación sea válido
+    if (!is_numeric($notificacion_id)) {
+        die("Error: ID de notificación no válido.");
+    }
+
+    // Marcar la notificación como leída
+    $stmt = $mysqli->prepare("UPDATE notificaciones SET leido = '1' WHERE id = ?");
+    $stmt->bind_param("i", $notificacion_id);
+    $stmt->execute();
+
+    // Verificar si la actualización fue exitosa
+    if ($stmt->error) {
+        die("Error al marcar la notificación como leída: " . $stmt->error);
+    }
+
+    $stmt->close();
+
+    // Redirigir a la página de notificaciones después de marcar como leída
+    header("Location: notificaciones.php");
+    exit();
+}
+?>
+

@@ -67,40 +67,20 @@
             </section>
             <section class="contact-form">
                 <h2>Contáctanos</h2>
-                <form>
-                    <input type="text" placeholder="Tu Nombre" required>
-                    <input type="email" placeholder="Tu Correo" required>
-                    <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
-                    <button type="submit">Enviar</button>
+                <form action="enviar.php" method="POST">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    <input type="email" name="email" placeholder="Tu Correo" required>
+                    <textarea name="mensaje" placeholder="Tu Mensaje" rows="5" required></textarea>
+                    <button class="button" type="submit">Enviar</button>
                 </form>
+                
             </section>
         </main>
     </div>
 
-    <!-- Botón del Asistente -->
-    <div id="chat-icon" class="chat-icon">
-        <i class="fa-solid fa-comments"></i>
-    </div>
-
-    <!-- Menú desplegable del chat -->
-    <div id="chat-menu" class="chat-menu">
-        <div class="chat-header">
-            <span>Chat de Ayuda</span>
-            <button id="close-chat" class="close-chat">X</button>
-        </div>
-        <div class="chat-box" id="chat-box">
-            <div class="chat-message bot-message">¡Hola! Soy tu asistente. ¿En qué puedo ayudarte?</div>
-        </div>
-        <div class="chat-input-container">
-            <input type="text" id="user-input" placeholder="Escribe tu pregunta..." />
-            <button id="send-btn">Enviar</button>
-        </div>
-    </div>
 
     
     <script src="JS/script.js"></script>
-    <script src="JS/bot.js"></script>
-
     <!-- Barra de navegación solo en móvil -->
     <nav class="mobile-nav">
         <a href="inicio.html" class="active"><i class="fa-solid fa-house"></i><span>Inicio</span></a>

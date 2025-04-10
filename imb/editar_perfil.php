@@ -150,6 +150,7 @@ if (isset($_POST['editar'])) {
                     <div class="e-but">
                         <input type="submit" value="Editar" name="editar" class="button_blue"
                                style="margin-left: 110px; margin-bottom: 30px; color: white; font-size: 16px; padding:6px 9px;font-weight: 600;">
+                               
                     </div>
                 </div>
             </div>

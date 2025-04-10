@@ -64,26 +64,20 @@ body {
   position: relative;
 }
 
-.overlap-text a {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  color: #003569;
-  font-size: 14px;
-  text-decoration: none;
-  font-family: 'Segoe UI', monospace;
-  font-weight: 400;
-}
+
 
 .btn {
   width: 100%;
-  background-color: #3897f0;
-  border: 1px solid #3897f0;
+  background-color: #7d7d7d;
+  border: 1px solid #7d7d7d;
   padding: 5px 12px;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
   border-radius: 3px;
+}
+.bt:hover{
+  background-color: #575757;
 }
 
 .btn:focus {
@@ -105,13 +99,7 @@ body {
   color: #333;
 }
 
-.s-part a {
-  text-decoration: none;
-  cursor: pointer;
-  color: #3897f0;
-  font-family: 'Segoe UI', monospace;
-  font-weight: 400;
-}
+
 
 .myButton {
   background-color:#3e3ed6;
@@ -230,49 +218,158 @@ body {
 /* HOME */
 
 
-.h-content {width: 65%; margin: auto; margin-top: 70px;}
-  .h-left {width: 65%; float: left; margin-right: 5%;}
-    .hl-cont {width: 100%; margin-bottom: 60px; float: left; border: 1px solid #E6E6E6;}
-    .hl-top {width: 100%; height: 60px;}
-      .hl-profile {width: 10%; height: 60px; float: left; position: relative;}
-        .hl-pic {width: 100%; position: absolute; top: 12%; left: 10%;}
-      .hl-username {width: 90%; height: 60px; float: left; position: relative;}
-        .hl-name {width: 100%; height: 30px; float: left; color: #262626; position: absolute; top: 10%; font-weight: 600;}
-        .hl-name a:link{text-decoration: none; color: #262626; font-weight: 600;}
-        .hl-name a:visited{text-decoration: none; color: #262626; font-weight: 600;}
-        .hl-location {width: 100%; height: 30px; float: left; font-family: 'Segoe UI'; font-weight: 400; color: #262626; position: absolute; top: 50%; font-size: 12px;}
-      .hl-menu {width: 100%; margin-bottom: 60px; text-align: center;}
-        .hl-icon {width: 33.3%; float: left;}
-    .hl-middle {width: 100%;}
-    .hl-bottom {width: 100%; height: 30px; padding: 10px;}
-    .hl-section-likes {width: 100%; height: 44px;}
-    .hl-section-likes img {padding: 10px;}
+.h-content {
+    width: 55%;
+    margin: auto;
+    margin-top: 70px;
+  }
+  .h-left {
+    width: 65%; 
+    float: left;
+     margin-right: 5%;
+    }
+    .hl-cont {width: 100%;
+       margin-bottom: 60px;
+        float: left; 
+        border: 1px solid #E6E6E6;
+      }
+    .hl-top {
+      width: 100%;
+       height: 60px;
+      }
+      .hl-profile {
+        width: 10%;
+         height: 60px;
+          float: left; 
+          position: relative;
+        }
+        .hl-pic {
+          width: 100%; 
+          position: absolute;
+           top: 12%; 
+           left: 10%;
+          }
+      .hl-username {
+        width: 90%;
+         height: 60px;
+          float: left; 
+          position: relative;
+        }
+        .hl-name {
+          width: 100%;
+           height: 30px;
+            float: left;
+             color: #262626;
+              position: absolute; 
+              top: 10%; 
+              font-weight: 600;
+            }
+        .hl-name a:link{
+          text-decoration: none;
+           color: #262626;
+            font-weight: 600;
+          }
+        .hl-name a:visited
+        {text-decoration: none;
+           color: #262626; 
+           font-weight: 600;
+          }
+        .hl-location {
+          width: 100%;
+           height: 30px; 
+           float: left; 
+           font-family: 'Segoe UI';
+            font-weight: 400; 
+            color: #262626; 
+            position: absolute;
+             top: 50%; 
+             font-size: 12px;
+            }
+      .hl-menu {
+        width: 100%;
+         margin-bottom: 60px; 
+         text-align: center;
+        }
+        .hl-icon {
+          width: 33.3%;
+           float: left;
+          }
+    .hl-middle {
+      width: 100%;
+    }
+    .hl-bottom {
+      width: 100%;
+       height: 30px; 
+       padding: 10px;
+      }
+    .hl-section-likes {width: 100%;
+       height: 44px;
+      }
+    .hl-section-likes img {
+      padding: 10px;
+    }
 
-  .h-right {width: 30%; float: right;}      
-    .hr-top {width: 100%; height: 100px;}
-      .hr-profile {width: 30%; height: 100px; float: left; position: relative;}
-        .hr-pic {width: 100%; position: absolute; top: 12%; left: 10%;}
-      .hr-username {width: 70%; height: 100px; float: left; position: relative;}
-        .hr-name {width: 100%; height: 50px; float: left; color: #262626; position: absolute; top: 10%; font-weight: 600;}
-        .hr-name a:link{text-decoration: none; color: #262626; font-weight: 600;}
-        .hr-name a:visited{text-decoration: none; color: #262626; font-weight: 600;}
-        .hr-nombre {width: 100%; height: 50px; float: left; font-family: 'Segoe UI'; font-weight: 400; color: #999999; position: absolute; top: 35%; font-size: 12px;}
+  .h-right {
+    width: 30%; 
+    float: right;
+  }      
+    .hr-top {
+      width: 100%; 
+      height: 100px;
+    }
+      .hr-profile {
+        width: 30%; 
+        height: 100px; 
+        float: left; 
+        position: relative;
+      }
+        .hr-pic {
+          width: 100%; 
+          position: absolute;
+           top: 12%; 
+           left: 10%;
+          }
+      .hr-username {
+        width: 70%; 
+        height: 100px;
+         float: left;
+          position: relative;
+        }
+        .hr-name {
+          width: 100%; 
+          height: 50px;
+           float: left; 
+           color: #262626;
+            position: absolute;
+             top: 10%;
+              font-weight: 600;
+            }
+        .hr-name a:link{text-decoration: none;
+           color: #262626; 
+           font-weight: 600;
+          }
+        .hr-name a:visited{text-decoration: none; 
+          color: #262626; 
+          font-weight: 600;}
+        .hr-nombre {width: 100%; 
+          height: 50px; 
+          float: left; 
+          font-family: 'Segoe UI';
+           font-weight: 400;
+            color: #999999;
+             position: absolute;
+              top: 35%; 
+              font-size: 12px;}
     
 
 
 
-  /* SEARCH FORM */
-
-  .search {padding: 6px 40px; border-radius: 4px 4px 4px 4px; -moz-border-radius: 4px 4px 4px 4px; -webkit-border-radius: 4px 4px 4px 4px;
-border: 1px solid #DBDBDB; }
 
 
-/* TOP BAR CONFIRM */
 
-.topbarc {width: 100%; height: 30px; background-color: #66CCCC; text-align: center; padding-top: 10px;}
 
- .topbarc a:link, a:visited{color: black; text-decoration: none;}
- .topbarc a:hover{color: black; text-decoration: underline;}
+
+
 
 
 /* CAMBIAR INPUT POR IMAGEN */

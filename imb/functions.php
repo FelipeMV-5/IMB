@@ -13,5 +13,12 @@ function datos_usuario($id,$value) {
 	echo $rowZ[$value];
 
 }
+function agregarNotificacion($mysqli, $usuario_id, $mensaje, $url = "#") {
+    $stmt = $mysqli->prepare("INSERT INTO notificaciones (user_id, mensaje, url, fecha, leido) VALUES (?, ?, ?, NOW(), 0)");
+    $stmt->bind_param("iss", $usuario_id, $mensaje, $url);
+    $stmt->execute();
+    $stmt->close();
+}
+
 
 ?>

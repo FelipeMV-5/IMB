@@ -11,11 +11,29 @@ if (isset($_POST['comentar'])) {
   $usuario_id = $_SESSION['id'];
   $comentario = $mysqli->real_escape_string($_POST['comentario']);
 
-  $mysqli->query("INSERT INTO comentarios (post_id, usuario_id, comentario) VALUES ('$post_id', '$usuario_id', '$comentario')");
+  // Obtener el username en lugar del ID
+  $consulta = $mysqli->query("SELECT username FROM users WHERE id = '$usuario_id'");
+  if ($consulta->num_rows > 0) {
+      $datos = $consulta->fetch_assoc();
+      $username = $datos['username'];
+
+      // Insertar el comentario con el username
+      $mysqli->query("INSERT INTO comentarios (post_id, user_id, comentario) VALUES ('$post_id', '$username', '$comentario')");
+  } else {
+      echo "Error: Usuario no encontrado.";
+  }
 }
 
 $post_id = $_GET['post_id'];
-$resultado = $mysqli->query("SELECT * FROM comentarios WHERE post_id = '$post_id' ORDER BY fecha DESC");
+
+// Modificamos la consulta para obtener username desde la tabla users
+$resultado = $mysqli->query("
+    SELECT comentarios.comentario, users.username 
+    FROM comentarios 
+    INNER JOIN users ON comentarios.user_id = users.username 
+    WHERE comentarios.post_id = '$post_id' 
+    ORDER BY comentarios.fecha DESC
+");
 
 ?>
 
@@ -38,11 +56,12 @@ $resultado = $mysqli->query("SELECT * FROM comentarios WHERE post_id = '$post_id
 </form>
 
 <?php while ($row = $resultado->fetch_assoc()) { ?>
-  <p><strong><?php echo $row['usuario_id']; ?></strong>: <?php echo $row['comentario']; ?></p>
+  <p><strong><?php echo $row['username']; ?></strong>: <?php echo $row['comentario']; ?></p>
 <?php } ?>
 
 </body>
 </html>
+
 <style>
   body {
   font-family: Arial, sans-serif;
