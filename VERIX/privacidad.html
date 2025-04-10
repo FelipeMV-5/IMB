@@ -3,33 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estado de Cuenta - Verix</title>
+    <title>Privacidad y Seguridad - Verix</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/privacidad.css"> <!-- Puedes crear este archivo para estilos personalizados -->
 </head>
 <body>
     <div class="container">
-        <!-- Barra lateral -->
         <aside class="sidebar">
             <h2>Verix</h2>
             <ul>
                 <li><a href="inicio.html"><i class="fa-solid fa-house"></i> <span>Inicio</span></a></li>
+                <li><a href="notificaciones.html"><i class="fa-solid fa-bell"></i> <span>Notificaciones</span></a></li>
                 <li><a href="crear.html"><i class="fa-solid fa-plus"></i> <span>Crear</span></a></li>
-                <li><a href="mensajes.html"><i class="fa-solid fa-envelope"></i> <span>Mensajes</span></a></li>
-                <li><a href="perfil.html" class="active"><i class="fa-solid fa-user"></i> <span>Perfil</span></a></li>
+                <li><a href="perfil.html"><i class="fa-solid fa-user"></i> <span>Perfil</span></a></li>
                 <li id="btn-mas"><i class="fa-solid fa-thumbtack"></i> <span>Más</span></li>
             </ul>
         </aside>
 
         <aside class="settings-sidebar" id="configuracion">
-
             <h3>Configuración</h3>
             <ul class="settings-menu">
                 <li><a href="editar_perfil.html"><span>Editar perfil</span> <i class="fa-solid fa-pen"></i></a></li>
                 <li id="btn-ayuda"><span>Ayuda</span> <i class="fa-solid fa-circle-question"></i></li>
             </ul>
-
-            <!-- Submenú de Ayuda -->
             <ul class="submenu" id="submenu-ayuda">
                 <li><a href="informar_problema.html"><span>Informar de un problema</span> <i class="fa-solid fa-bug"></i></a></li>
                 <li><a href="estado_cuenta.html"><span>Estado de la cuenta</span> <i class="fa-solid fa-chart-line"></i></a></li>
@@ -37,49 +34,47 @@
                 <li><a href="privacidad.html"><span>Privacidad y seguridad</span> <i class="fa-solid fa-lock"></i></a></li>
             </ul>
         </aside>
-        
 
-        <!-- Contenido principal -->
         <main class="content">
-            <h2>Estado de Cuenta</h2>
+            <h1>Privacidad y Seguridad</h1>
+            <section class="privacy-section">
+                <h2>Control de privacidad</h2>
+                <p>Puedes gestionar quién puede ver tu información personal desde la configuración de privacidad de tu cuenta.</p>
 
-            <!-- Información de la cuenta -->
-            <div class="account-info">
-                <h3>Detalles de la Cuenta</h3>
-                <p><strong>Nombre de usuario:</strong> __felipemartinez__</p>
-                <p><strong>Correo electrónico:</strong> felipe@example.com</p>
-                <p><strong>Fecha de creación:</strong> 10 Enero 2024</p>
-                <p><strong>Estado:</strong> Activa</p>
-            </div>
+                <h3>Visibilidad del perfil</h3>
+                <p>Configura si tu perfil es visible para todos, solo amigos o privado.</p>
 
-            <!-- Registro de actividad -->
-            <div class="activity-log">
-                <h3>Actividad reciente</h3>
-                <ul>
-                    <li>🔹 Inicio de sesión desde un nuevo dispositivo - 15 Mar 2025</li>
-                    <li>🔹 Cambio de foto de perfil - 10 Mar 2025</li>
-                    <li>🔹 Modificación de biografía - 05 Mar 2025</li>
-                    <li>🔹 Verificación de cuenta completada - 01 Mar 2025</li>
-                </ul>
-            </div>
+                <h3>Bloqueo de usuarios</h3>
+                <p>Bloquea usuarios para que no puedan ver tu perfil ni enviarte mensajes.</p>
 
-            <!-- Seguridad de la cuenta -->
-            <div class="security-options">
-                <h3>Seguridad</h3>
-                <p>Para mantener tu cuenta segura, te recomendamos activar la autenticación en dos pasos.</p>
-                <button class="btn">Configurar seguridad</button>
-            </div>
+                <h3>Sesiones activas</h3>
+                <p>Desde aquí puedes revisar y cerrar sesiones activas en otros dispositivos.</p>
+            </section>
+
+            <section class="security-section">
+                <h2>Seguridad de la cuenta</h2>
+                <h3>Contraseña</h3>
+                <p>Te recomendamos usar una contraseña segura que contenga letras, números y símbolos. Cámbiala regularmente.</p>
+
+                <h3>Autenticación en dos pasos</h3>
+                <p>Activa la verificación en dos pasos para proteger tu cuenta de accesos no autorizados.</p>
+
+                <h3>Notificaciones de seguridad</h3>
+                <p>Recibirás alertas por correo electrónico si detectamos actividad sospechosa en tu cuenta.</p>
+            </section>
         </main>
     </div>
+
+ 
+
+    <script src="JS/script.js"></script>
+    
     <nav class="mobile-nav">
         <a href="inicio.html" class="active"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
         <a href="buscar.html"><i class="fa-solid fa-magnifying-glass"></i><span>Buscar</span></a>
         <a href="crear.html"><i class="fa-solid fa-plus-circle"></i><span>Crear</span></a>
         <a href="mensajes.html"><i class="fa-solid fa-envelope"></i><span>Mensajes</span></a>
         <a href="perfil.html"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
-
     </nav>
-
-    <script src="JS/script.js"></script>
 </body>
 </html>
