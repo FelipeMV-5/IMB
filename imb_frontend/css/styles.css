@@ -273,6 +273,56 @@ select {
     display: none;
 }
 
+/* Menú hamburguesa */
+.hamburger-container {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#hamburger-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.hamburger-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: column;
+    width: 200px;
+}
+
+.hamburger-menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hamburger-menu a:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger-container {
+        display: block;
+    }
+}
+
 @media (max-width: 768px) {
     .sidebar {
         display: none;

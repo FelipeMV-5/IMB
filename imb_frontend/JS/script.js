@@ -13,3 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
         submenuAyuda.classList.toggle("visible");
     });
 });
+
+  const burgerBtn = document.getElementById("hamburger-btn");
+  const burgerMenu = document.getElementById("hamburger-menu");
+
+  burgerBtn.addEventListener("click", () => {
+    burgerMenu.style.display = burgerMenu.style.display === "flex" ? "none" : "flex";
+  });
+
+  // Cierra el menú si haces clic fuera
+  document.addEventListener("click", (e) => {
+    if (!burgerMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
+      burgerMenu.style.display = "none";
+    }
+  });
