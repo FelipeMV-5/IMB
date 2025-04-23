@@ -1,4 +1,4 @@
-/* 🔹 Estilos para la sección de perfil */
+/*  Estilos para la sección de perfil */
 .content {
     max-width: 600px;
     margin: auto;
@@ -35,7 +35,7 @@
     background: #28a745;
 }
 
-/* 🔹 Estilos para el formulario */
+/* Estilos para el formulario */
 form {
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@ select {
     margin-right: 10px;
 }
 
-/* 🔹 Responsividad */
+/* Responsiv */
 @media (max-width: 768px) {
     .content {
         padding: 15px;

@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Barra lateral izquierda -->
         <aside class="sidebar">
             <h2>Verix</h2>
             <ul>
@@ -30,7 +29,6 @@
                 <li id="btn-ayuda"><span>Ayuda</span> <i class="fa-solid fa-circle-question"></i></li>
             </ul>
 
-            <!-- Submenú de Ayuda -->
             <ul class="submenu" id="submenu-ayuda">
                 <li><a href="informar_problema.html"><span>Informar de un problema</span> <i class="fa-solid fa-bug"></i></a></li>
                 <li><a href="estado_cuenta.html"><span>Estado de la cuenta</span> <i class="fa-solid fa-chart-line"></i></a></li>
@@ -40,7 +38,6 @@
         </aside>
         
 
-        <!-- Contenido principal -->
         <main class="content">
             <h2>Informar un problema</h2>
             <p>Si encontraste un error o problema en la plataforma, por favor, infórmanos para que podamos solucionarlo.</p>
@@ -63,7 +60,6 @@
         </main>
     </div>
 
-    <!-- Script para enviar datos con AJAX -->
     <script>
         document.getElementById("problema-form").addEventListener("submit", function(event) {
             event.preventDefault(); // Evita recargar la página
@@ -72,7 +68,6 @@
             const tipoProblema = document.getElementById("tipo-problema").value;
             const descripcion = document.getElementById("descripcion").value;
 
-            // Enviar los datos mediante AJAX a un archivo PHP
             fetch("enviar_reporte.php", {
                 method: "POST",
                 headers: {
@@ -91,7 +86,6 @@
     
     <script src="JS/script.js"></script>
      
-<!-- Barra de navegaciónsolo en movil -->
     <nav class="mobile-nav">
         <a href="inicio.html" class="active"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
         <a href="buscar.html"><i class="fa-solid fa-magnifying-glass"></i><span>Buscar</span></a>

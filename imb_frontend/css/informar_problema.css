@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
 }
 
-/* 🔹 Barra lateral */
+/* Barra lateral */
 .sidebar {
     width: 250px;
     background-color: #ffffff;
@@ -60,7 +60,7 @@ p {
     color: #666;
 }
 
-/* 🔹 Formulario */
+/* Formulario */
 form {
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@ textarea {
     background-color: #0056b3;
 }
 
-/* 🔹 Barra de navegación móvil */
+/* Barra de navegación móvil */
 .mobile-nav {
     display: none;
     position: fixed;
@@ -126,7 +126,7 @@ textarea {
     color: #007bff;
 }
 
-/* 🔹 Diseño responsive */
+/* Diseño responsive */
 @media (max-width: 768px) {
     .sidebar {
         display: none;
