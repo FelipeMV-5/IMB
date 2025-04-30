@@ -1,6 +1,5 @@
 /* 🔹 Estilos Generales */
 body {
-
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -70,57 +69,52 @@ body {
     margin-left: auto;
 }
 
-/* Barra de Configuración (Derecha) */
+/*Barra de Configuración Derecha*/
 .settings-sidebar {
     position: fixed;
     right: -300px;
     top: 0;
     width: 250px;
     height: 100vh;
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
     border-left: 1px solid #ddd;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 25px 20px;
     overflow-y: auto;
-    transition: right 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
 }
 
 .settings-sidebar.visible {
     right: 0;
 }
 
-/*  Botón de cerrar */
 #btn-cerrar-config {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 1.2rem;
     cursor: pointer;
-    color: #555;
+    color: #7f8c8d;
+    transition: color 0.2s;
 }
 
 #btn-cerrar-config:hover {
-    color: #000;
+    color: #e74c3c;
 }
 
-/*  Título Configuración */
 .settings-sidebar h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #333;
+    font-size: 1.3rem;
+    color: #2c3e50;
     text-align: center;
-    border-bottom: 2px solid #ddd;
+    margin: 0 0 20px;
     padding-bottom: 10px;
+    border-bottom: 2px solid rgba(44, 62, 80, 0.1);
     width: 100%;
 }
 
-/*  Estilos del Menú */
 .settings-menu {
     list-style: none;
     padding: 0;
@@ -129,69 +123,81 @@ body {
 
 .settings-menu li {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 15px;
     padding: 12px 15px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #444;
+    margin-bottom: 8px;
     border-radius: 8px;
-    transition: background 0.3s ease-in-out;
-}
-
-.settings-menu li i {
-    font-size: 18px;
-    color: #666;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .settings-menu li:hover {
-    background: #e3e3e3;
-    cursor: pointer;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-/*  Submenú de Ayuda */
+.settings-menu li:hover i {
+    color: #2980b9;
+}
+
+.settings-menu i {
+    font-size: 1rem;
+    color: #7f8c8d;
+    transition: color 0.3s;
+}
+
 .submenu {
     list-style: none;
     padding: 0;
-    margin-top: 10px;
-    display: none;
-    width: 100%;
+    margin: 5px 0 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    border-left: 2px dashed #bdc3c7;
 }
 
-.submenu li{
+.submenu.visible {
+    max-height: 500px;
+}
+
+.submenu li {
     padding: 10px 15px;
-    font-size: 15px;
-    color: #555;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    font-size: 0.9rem;
     border-radius: 6px;
-    transition: background 0.3s ease-in-out;
-    text-decoration: none;
+    margin-bottom: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.submenu.visible li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.submenu li:hover {
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .submenu a {
+    color: #34495e;
     text-decoration: none;
-    color: #000;
-}
-.submenu li:hover {
-    background: #ddd;
-    cursor: pointer;
-}
-
-/*  Mostrar submenú */
-.submenu.visible {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 
-/*  Contenido Principal */
+/*Contenido Principal*/
 .content {
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
 }
 
-/*  Sección de Perfil */
 .content {
     max-width: 600px;
     margin: auto;
@@ -239,7 +245,7 @@ body {
     background: #218838;
 }
 
-/*  Formulario */
+/*Formulario */
 form {
     display: flex;
     flex-direction: column;
@@ -268,12 +274,11 @@ select {
     margin-right: 10px;
 }
 
-/*  Navegación Móvil */
+/* Móvil */
 .mobile-nav {
     display: none;
 }
 
-/* Menú hamburguesa */
 .hamburger-container {
     display: none;
     position: absolute;

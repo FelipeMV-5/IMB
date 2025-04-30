@@ -126,17 +126,3 @@ textarea {
     color: #007bff;
 }
 
-/* Diseño responsive */
-@media (max-width: 768px) {
-    .sidebar {
-        display: none;
-    }
-
-    .content {
-        padding: 15px;
-    }
-
-    .mobile-nav {
-        display: flex;
-    }
-}

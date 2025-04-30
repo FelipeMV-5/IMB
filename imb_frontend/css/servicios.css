@@ -1,34 +1,162 @@
-.content h1, h2{
-    color: red;
-    border-radius: none;
+/* 🔹 Estilos para el Contenido Principal */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-.content h3, p{
-    color: blue;
-}
-
-
-.contact-form input, textarea{
-    color: green;
-}
-
-.button {
-    width: 200px;
-    background-color: #04AA6D; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 15px;
+.content h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.content h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #04AA6D;
+}
+
+.content h2 {
+    color: #2980b9;
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.content h3 {
+    color: #16a085;
+    font-size: 1.4rem;
+    margin: 25px 0 10px;
+}
+
+/* 🔹 Estilos para las Preguntas Frecuentes */
+.faq-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.faq-item p {
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* 🔹 Estilos para el Formulario de Contacto */
+/* 🔹 Corrección para el formulario */
+.contact-form {
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    width: 100%;
+    max-width: 600px; /* Limita el ancho máximo */
+    margin: 40px auto 0; /* Centrado */
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
     font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
+    transition: border-color 0.3s ease;
+    color: #333;
+}
+
+/* 🔹 Asegurar que el contenedor principal también tenga box-sizing correcto */
+.content {
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    width: 100%;
+}
+
+/* 🔹 Estilos para el Botón (Mejorado) */
+.button {
+    width: 100%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .button:hover {
-    background-color: #04AA6D;
-    color: white;
+    background-color: #039c63;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(4, 170, 109, 0.3);
 }
-  
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* 🔹 Estilos para la Lista de Contacto */
+.contact-methods {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.contact-methods li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.contact-methods li::before {
+    content: '•';
+    color: #04AA6D;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+}
