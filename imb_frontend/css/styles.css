@@ -7,7 +7,10 @@ body {
     height: 100vh;
     background: linear-gradient(to top, #ccc, #fff);
 }
-
+li, a {
+    text-decoration: none;
+    color: bla;
+}
 .container {
     display: flex;
     width: 100%;
@@ -131,6 +134,7 @@ body {
     background-color: rgba(255, 255, 255, 0.7);
     transition: all 0.3s ease;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .settings-menu li:hover {
@@ -156,6 +160,7 @@ body {
     overflow: hidden;
     transition: max-height 0.4s ease;
     border-left: 2px dashed #bdc3c7;
+    text-decoration: none;
 }
 
 .submenu.visible {
@@ -171,6 +176,7 @@ body {
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateX(-10px);
+    text-decoration: none;
 }
 
 .submenu.visible li {
@@ -189,37 +195,6 @@ body {
     align-items: center;
     gap: 10px;
     width: 100%;
-}
-
-/*Contenido Principal*/
-.content {
-    flex-grow: 1;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-.content {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-}
-
-.profile-section {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.profile-section img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    border: 2px solid #007bff;
-}
-
-.profile-info p {
-    margin: 5px 0;
 }
 
 /*  Botones */
@@ -245,34 +220,7 @@ body {
     background: #218838;
 }
 
-/*Formulario */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
-textarea {
-    width: 100%;
-    height: 60px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-select {
-    padding: 8px;
-    border-radius: 5px;
-}
-
-.checkbox-container {
-    display: flex;
-    align-items: center;
-}
-
-.checkbox-container input {
-    margin-right: 10px;
-}
 
 /* Móvil */
 .mobile-nav {
