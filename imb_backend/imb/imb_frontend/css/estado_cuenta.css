@@ -1,0 +1,105 @@
+/* Estilos para el contenido principal */
+.content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    color: #2c3e50;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Secciones de información */
+.account-info, 
+.activity-log, 
+.security-options {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.content h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+}
+
+/* Información de cuenta */
+.account-info p {
+    margin: 0.8rem 0;
+    line-height: 1.6;
+}
+
+.account-info strong {
+    color: #2c3e50;
+    min-width: 150px;
+    display: inline-block;
+}
+
+/* Actividad reciente */
+.activity-log ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-log li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.activity-log li:last-child {
+    border-bottom: none;
+}
+
+/* Opciones de seguridad */
+.security-options p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content {
+        padding: 1.5rem;
+    }
+    
+    .account-info p {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .account-info strong {
+        margin-bottom: 0.3rem;
+    }
+}

@@ -1,0 +1,88 @@
+/* Estilos para el contenido principal */
+.content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.content p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Formulario */
+#problema-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+#problema-form label {
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: -0.8rem;
+}
+
+#problema-form select,
+#problema-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+#problema-form select {
+    background-color: #f8f9fa;
+}
+
+#problema-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#problema-form select:focus,
+#problema-form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Botón */
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+/* Mensaje de éxito */
+#mensaje-envio {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    border-left: 4px solid #4caf50;
+}

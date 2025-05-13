@@ -1,0 +1,71 @@
+/* Estilos generales del contenido principal */
+.content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin: 1.5rem 0 1rem;
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 1rem 0 0.5rem;
+}
+
+/* Secciones */
+.privacy-section, .security-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.privacy-section p, .security-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Listas (si las hubiera) */
+.content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Botones o elementos interactivos (ejemplo) */
+.content button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.content button:hover {
+    background-color: #2980b9;
+}
