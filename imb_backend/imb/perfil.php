@@ -40,8 +40,8 @@ if (isset($_GET['username'])) {
             $mysqli->query("DELETE FROM seguidores WHERE seguidor = '" . $_SESSION['id'] . "' AND seguido = '" . $rowA['id'] . "'");
             header("Location: perfil.php?username=" . $_GET['username']);
         } else {
-            // Si no está siguiendo, enviar solicitud de seguimiento
-            $aprobado = ($rowA['private_profile'] == 1) ? 0 : 1;  // Si el perfil es privado, no está aprobado
+            
+            $aprobado = ($rowA['private_profile'] == 1) ? 0 : 1;
             $mysqli->query("INSERT INTO seguidores (seguidor, seguido, aprobada, fecha) VALUES ('" . $_SESSION['id'] . "', '" . $rowA['id'] . "', '$aprobado', NOW())");
             header("Location: perfil.php?username=" . $_GET['username']);
         }
