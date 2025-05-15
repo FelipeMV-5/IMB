@@ -1,4 +1,4 @@
-/*  Estilos para la sección de perfil */
+/*  Estilos editar perfil */
 .content {
     max-width: 600px;
     margin: auto;
@@ -35,7 +35,7 @@
     background: #28a745;
 }
 
-/* Estilos para el formulario */
+/* Estilos formulario */
 form {
     display: flex;
     flex-direction: column;

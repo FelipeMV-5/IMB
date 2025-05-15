@@ -1,4 +1,4 @@
-/* 🔹 Estilos para el Contenido Principal */
+/*Estilos servicios*/
 .content {
     max-width: 800px;
     margin: 0 auto;
@@ -42,7 +42,7 @@
     margin: 25px 0 10px;
 }
 
-/* 🔹 Estilos para las Preguntas Frecuentes */
+/*Estilos Preguntas Frecuentes */
 .faq-item {
     background: #fff;
     border-radius: 8px;
@@ -67,8 +67,8 @@
     margin-bottom: 0;
 }
 
-/* 🔹 Estilos para el Formulario de Contacto */
-/* 🔹 Corrección para el formulario */
+/* Estilos para el Formulario de Contacto */
+
 .contact-form {
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
     width: 100%;

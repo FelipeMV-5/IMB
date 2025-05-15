@@ -72,29 +72,6 @@
         </main>
     </div>
 
-    <script>
-        document.getElementById("problema-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Evita recargar la página
-
-            // Obtener datos del formulario
-            const tipoProblema = document.getElementById("tipo-problema").value;
-            const descripcion = document.getElementById("descripcion").value;
-
-            fetch("enviar_reporte.php", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                },
-                body: `tipo=${encodeURIComponent(tipoProblema)}&descripcion=${encodeURIComponent(descripcion)}`
-            })
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("mensaje-envio").style.display = "block";
-                document.getElementById("problema-form").reset(); // Limpiar el formulario
-            })
-            .catch(error => console.error("Error al enviar:", error));
-        });
-    </script>
     
     <script src="JS/script.js"></script>
      
