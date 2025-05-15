@@ -1,4 +1,4 @@
-/*Estilos servicios*/
+/* Estilos del contenido principal */
 .content {
     max-width: 800px;
     margin: 0 auto;
@@ -6,6 +6,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .content h1 {
@@ -42,7 +44,7 @@
     margin: 25px 0 10px;
 }
 
-/*Estilos Preguntas Frecuentes */
+/* Estilos Preguntas Frecuentes */
 .faq-item {
     background: #fff;
     border-radius: 8px;
@@ -67,6 +69,12 @@
     margin-bottom: 0;
 }
 
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+}
 /* Estilos para el Formulario de Contacto */
 
 .contact-form {
