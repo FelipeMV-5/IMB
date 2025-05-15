@@ -13,7 +13,7 @@ require "conexion.php";
 <!DOCTYPE html>
 <html lang="es">  
 <head>    
-    <title>Photogram</title>    
+    <title>Subir IMB</title>    
     <meta charset="UTF-8">
     <meta name="title" content="Photogram">
     <meta name="description" content="Photogram">    
