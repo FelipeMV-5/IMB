@@ -63,20 +63,3 @@ select {
 .checkbox-container input {
     margin-right: 10px;
 }
-
-/* Responsiv */
-@media (max-width: 768px) {
-    .content {
-        padding: 15px;
-    }
-
-    .profile-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-info {
-        text-align: center;
-    }
-}
- 

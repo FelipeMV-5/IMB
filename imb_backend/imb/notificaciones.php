@@ -8,7 +8,7 @@ if (!isset($_SESSION['id'])) {
 
 $usuario_id = $_SESSION['id'];
 
-// 👇 Cambiado a "fecha"
+// Cambiado a "fecha"
 $stmt = $mysqli->prepare("SELECT * FROM notificaciones WHERE usuario_id = ? ORDER BY fecha DESC");
 $stmt->bind_param("i", $usuario_id);
 $stmt->execute();
