@@ -16,7 +16,7 @@
     <a href="home.php"> <img class="logo" src="images/logo.png" alt="logo"></a>
     <ul>
         <div class="barra">
-            <form action="bucar.php" method="GET">
+            <form action="buscar.php" method="GET">
                 <input type="text" name="query" placeholder="Buscar usuarios..." required>
                 <button type="submit">Buscar</button>
             </form>
@@ -58,7 +58,7 @@
         <script src="js/script.js"></script>
         <nav class="mobile-nav">
         <a href="home.php"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
-        <a href="bucar.php"><i class="fa-solid fa-magnifying-glass"></i><span>Buscar</span></a>
+        <a href="buscar.php"><i class="fa-solid fa-magnifying-glass"></i><span>Buscar</span></a>
         <a href="subir.php"><i class="fa-solid fa-plus-circle"></i><span>Crear</span></a>
         <a href="perfil.php?username=<?php echo $_SESSION['username']; ?>"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
     </nav>
