@@ -47,7 +47,6 @@ li, a {
     font-size: 16px;
     gap: 15px;
     border-radius: 8px;
-    transition: background 0.3s ease-in-out;
 }
 
 .sidebar a {
@@ -63,14 +62,7 @@ li, a {
     background: #ddd;
 }
 
-.notif {
-    background: red;
-    color: white;
-    font-size: 12px;
-    padding: 3px 7px;
-    border-radius: 50%;
-    margin-left: auto;
-}
+
 
 /*Barra de Configuración Derecha*/
 .settings-sidebar {
@@ -90,22 +82,6 @@ li, a {
 
 .settings-sidebar.visible {
     right: 0;
-}
-
-#btn-cerrar-config {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: #7f8c8d;
-    transition: color 0.2s;
-}
-
-#btn-cerrar-config:hover {
-    color: #e74c3c;
 }
 
 .settings-sidebar h3 {
@@ -142,14 +118,9 @@ li, a {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-.settings-menu li:hover i {
-    color: #2980b9;
-}
-
 .settings-menu i {
     font-size: 1rem;
     color: #7f8c8d;
-    transition: color 0.3s;
 }
 
 .submenu {
@@ -158,7 +129,6 @@ li, a {
     margin: 5px 0 0 15px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
     border-left: 2px dashed #bdc3c7;
     text-decoration: none;
 }
@@ -173,15 +143,12 @@ li, a {
     border-radius: 6px;
     margin-bottom: 5px;
     background: rgba(255, 255, 255, 0.5);
-    transition: all 0.3s ease;
     opacity: 0;
-    transform: translateX(-10px);
     text-decoration: none;
 }
 
 .submenu.visible li {
     opacity: 1;
-    transform: translateX(0);
 }
 
 .submenu li:hover {
