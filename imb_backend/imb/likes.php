@@ -5,10 +5,6 @@ require "conexion.php";
 $postid = $_POST['id'];
 $user = $_SESSION['id'];
 
-// Activar errores (opcional, para depurar)
-// mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
 
 $countLikes = $mysqli->query("SELECT * FROM likes WHERE usuario = '$user' AND post = '$postid'");
 $cLike = $countLikes->num_rows;

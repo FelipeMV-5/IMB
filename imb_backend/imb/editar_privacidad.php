@@ -17,10 +17,10 @@ include "functions.php";
 <!DOCTYPE html>
 <html lang="es">  
   <head>    
-    <title>Photogram</title>    
+    <title>IMB</title>    
     <meta charset="UTF-8">
-    <meta name="title" content="Photogram">
-    <meta name="description" content="Photogram">    
+    <meta name="title" content="IMB">
+    <meta name="description" content="IMB">    
     <link href="css/style.css" rel="stylesheet" type="text/css"/>  
     <link href="css/instagram.css" rel="stylesheet" type="text/css"/>   
   </head>  

@@ -15,8 +15,8 @@ require "conexion.php";
 <head>    
     <title>Subir IMB</title>    
     <meta charset="UTF-8">
-    <meta name="title" content="Photogram">
-    <meta name="description" content="Photogram">    
+    <meta name="title" content="IMB">
+    <meta name="description" content="IMB">    
     <link href="css/subir.css" rel="stylesheet" type="text/css"/>   
     <link href="css/instagram.css" rel="stylesheet" type="text/css"/>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 

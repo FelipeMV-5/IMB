@@ -18,8 +18,8 @@ $mysqli->close();
   <head>    
     <title>imb</title>    
     <meta charset="UTF-8">
-    <meta name="title" content="Photogram">
-    <meta name="description" content="Photogram">    
+    <meta name="title" content="IMB">
+    <meta name="description" content="IMB">    
     <link href="css/style.css" rel="stylesheet" type="text/css"/>  
 	<link rel="stylesheet" href="css/style-mobile.css">
     <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>

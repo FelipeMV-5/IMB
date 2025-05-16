@@ -54,8 +54,8 @@ if (isset($_GET['username'])) {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="title" content="Photogram">
-    <meta name="description" content="Photogram">
+    <meta name="title" content="IMB">
+    <meta name="description" content="IMB">
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <title>Perfil de <?php echo $rowA['username']; ?></title>
 </head>
